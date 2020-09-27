@@ -40,7 +40,7 @@ X = np.array(data.iloc[:, :-1])
 y = np.array(data.iloc[:, -1])
 X = scaler.fit_transform(X)
 
-#Dimensionality reduction to retain 99% of variance. Features reduced from 1.3K to around 400
+#Dimensionality reduction to retain 99% of variance. Features reduced from 2K to around 400
 pca = PCA(n_components=0.99, svd_solver='full')
 X_reduced = pca.fit_transform(X)
 X_train, X_test, y_train, y_test = train_test_split(X_reduced, y, random_state=1)
